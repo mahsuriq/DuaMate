@@ -1,0 +1,208 @@
+/* ==========================================
+   DuaMate - Core Stylesheet (style.css)
+   ========================================== */
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ffe6f2, #ffd6ec);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 79, 160, 0.15);
+}
+
+/* Header & Live Clock */
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: #ff4fa0;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.datetime-container {
+    background: #fff0f7;
+    padding: 10px;
+    border-radius: 12px;
+    display: inline-block;
+    color: #ff2f8f;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: 1px dashed #ffb3d9;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: #fff0f7;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+nav button {
+    background: none;
+    border: none;
+    color: #ff4fa0;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav button.active, nav button:hover {
+    background: #ff4fa0;
+    color: white;
+}
+
+/* Page Content (Tabs Animation) */
+.page {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Form & UI Elements */
+label {
+    font-weight: bold;
+    color: #444;
+    display: block;
+    margin-bottom: 8px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid pink;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: #ff4fa0;
+}
+
+/* Buttons */
+.primary-btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #ff4fa0;
+    color: white;
+    font-size: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.primary-btn:hover {
+    background: #ff2f8f;
+}
+
+.clear-btn {
+    background: #ffccd5;
+    color: #d9383a;
+    margin-top: 15px;
+}
+
+.clear-btn:hover {
+    background: #ffb3c1;
+}
+
+/* Cards */
+.card {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff0f7;
+    border-radius: 15px;
+    border-left: 5px solid #ff4fa0;
+}
+
+.card h2 {
+    color: #ff4fa0;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+#doa, #dailyDua {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    white-space: pre-line;
+}
+
+/* History List */
+.history-list {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.history-item {
+    background: #fff0f7;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #ffb3d9;
+}
+
+.history-emotion {
+    font-weight: bold;
+    color: #ff4fa0;
+}
+
+.history-time {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    text-align: center;
+    color: gray;
+    font-size: 14px;
+}
