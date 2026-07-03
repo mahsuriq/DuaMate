@@ -14,6 +14,13 @@ const auth = firebase.auth();
 function showApp() {
     document.getElementById("loginBox").style.display = "none";
     document.getElementById("mainApp").style.display = "block";
+
+    const user = auth.currentUser;
+
+    if (user) {
+        document.getElementById("welcomeUser").innerText =
+            "Welcome, " + user.email + " 🤍";
+    }
 }
 
 function signup() {
@@ -43,3 +50,8 @@ function login() {
             document.getElementById("msg").innerHTML = error.message;
         });
 }
+auth.onAuthStateChanged((user) => {
+    if (user) {
+        showApp();
+    }
+});
