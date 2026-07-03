@@ -6,8 +6,8 @@
     <title>DuaMate - Your Spiritual Companion</title>
     <!-- Menyambungkan fail index.html dengan style.css -->
     <link rel="stylesheet" href="style.css">
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+    
+    <style>
     #loginBox {
         display: block;
     }
@@ -19,13 +19,12 @@
     .page.active {
         display: block;
     }
+    </style>
 </head>
 <body>
 
 <div id="loginBox">
-  <style>
-  #DuaMate { display: none; }
-  </style>
+  
   <h2>DuaMate Login</h2>
   <input id="email" placeholder="Email">
   <input id="password" type="password" placeholder="Password">
@@ -35,7 +34,7 @@
 
   <p id="msg"></p>
 </div>
-<div class="container">
+<div class="container" id="mainApp" style="display:none;">
     <header>
         <h1>🌸 DuaMate</h1>
         <p class="subtitle">Find comfort through duas based on your emotions.</p>
