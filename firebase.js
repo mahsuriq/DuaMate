@@ -22,7 +22,8 @@ function signup() {
 
     auth.createUserWithEmailAndPassword(email, password)
         .then(() => {
-            document.getElementById("msg").innerHTML = "✅ Account created!";
+            showApp();
+            document.getElementById("msg").innerHTML = "Account created!";
         })
         .catch((error) => {
             document.getElementById("msg").innerHTML = error.message;
@@ -35,8 +36,8 @@ function login() {
 
     auth.signInWithEmailAndPassword(email, password)
         .then(() => {
-            document.getElementById("msg").innerHTML = "✅ Logged in!";
             showApp();
+            document.getElementById("msg").innerHTML = "Logged in!";
         })
         .catch((error) => {
             document.getElementById("msg").innerHTML = error.message;
