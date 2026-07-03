@@ -42,7 +42,7 @@ function signup() {
 
           // set display name (IMPORTANT)
             return userCredential.user.updateProfile({
-                displayName: email.split("@")[0]
+                displayName: name
             });
 
         })
