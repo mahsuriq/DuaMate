@@ -11,6 +11,10 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
+function showApp() {
+    document.getElementById("loginBox").style.display = "none";
+    document.querySelector(".container").style.display = "block";
+}
 
 function signup() {
     const email = document.getElementById("email").value;
@@ -32,6 +36,7 @@ function login() {
     auth.signInWithEmailAndPassword(email, password)
         .then(() => {
             document.getElementById("msg").innerHTML = "✅ Logged in!";
+            showApp();
         })
         .catch((error) => {
             document.getElementById("msg").innerHTML = error.message;
