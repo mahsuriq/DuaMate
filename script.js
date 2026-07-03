@@ -1,45 +1,7 @@
 /* ==========================================
    DuaMate - Core Logic Script (script.js)
    ========================================== */
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyDx8Bh-Xrf118qYvJHZ56wAwjZy-yWcPs0",
-  authDomain: "duamate-4c05a.firebaseapp.com",
-  projectId: "duamate-4c05a",
-  storageBucket: "duamate-4c05a.firebasestorage.app",
-  messagingSenderId: "717245050918",
-  appId: "1:717245050918:web:bdf107962c9c8637a376e7",
-  measurementId: "G-2W841L2PQ6"
-};
 
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-
-function signup() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-    auth.createUserWithEmailAndPassword(email, password)
-        .then(() => {
-            document.getElementById("msg").innerHTML = "✅ Account created!";
-        })
-        .catch((error) => {
-            document.getElementById("msg").innerHTML = error.message;
-        });
-}
-
-function login() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-    auth.signInWithEmailAndPassword(email, password)
-        .then(() => {
-            document.getElementById("msg").innerHTML = "✅ Logged in!";
-        })
-        .catch((error) => {
-            document.getElementById("msg").innerHTML = error.message;
-        });
-}
 // 1. Database Doa mengikut Emosi
 const duas = {
     "Happy 😊": "Alhamdulillahi Rabbil 'Alamin.\n\nMeaning: All praise belongs to Allah.",
