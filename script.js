@@ -15,6 +15,31 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
+function signup() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    auth.createUserWithEmailAndPassword(email, password)
+        .then(() => {
+            document.getElementById("msg").innerHTML = "✅ Account created!";
+        })
+        .catch((error) => {
+            document.getElementById("msg").innerHTML = error.message;
+        });
+}
+
+function login() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    auth.signInWithEmailAndPassword(email, password)
+        .then(() => {
+            document.getElementById("msg").innerHTML = "✅ Logged in!";
+        })
+        .catch((error) => {
+            document.getElementById("msg").innerHTML = error.message;
+        });
+}
 // 1. Database Doa mengikut Emosi
 const duas = {
     "Happy 😊": "Alhamdulillahi Rabbil 'Alamin.\n\nMeaning: All praise belongs to Allah.",
