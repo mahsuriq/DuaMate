@@ -18,8 +18,10 @@ function showApp() {
     const user = auth.currentUser;
 
     if (user) {
+       let name = user.displayName || "User";
+      
         document.getElementById("welcomeUser").innerText =
-            "Welcome, " + user.email + " 🤍";
+            "Welcome, " + name + " 🤍";
     }
 }
 
@@ -28,6 +30,14 @@ function signup() {
     const password = document.getElementById("password").value;
 
     auth.createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+
+          // set display name (IMPORTANT)
+            return userCredential.user.updateProfile({
+                displayName: email.split("@")[0]
+            });
+
+        })
         .then(() => {
             showApp();
             document.getElementById("msg").innerHTML = "Account created!";
