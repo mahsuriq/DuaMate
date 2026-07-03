@@ -17,17 +17,25 @@ function showApp() {
 
     const user = auth.currentUser;
 
-    if (user) {
-       let name = user.displayName || "User";
-      
+    user.reload().then(() => {
+
+        let name = user.displayName;
+
+        if (!name) {
+            name = user.email.split("@")[0];
+        }
+
         document.getElementById("welcomeUser").innerText =
             "Welcome, " + name + " 🤍";
-    }
+
+    });
 }
 
 function signup() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+
+    const name = email.split("@")[0]; // take name before @
 
     auth.createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
