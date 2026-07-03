@@ -13,7 +13,7 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 function showApp() {
     document.getElementById("loginBox").style.display = "none";
-    document.querySelector(".container").style.display = "block";
+    document.getElementById("mainApp").style.display = "block";
 }
 
 function signup() {
