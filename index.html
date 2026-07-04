@@ -61,6 +61,7 @@
         <button class="nav-btn" onclick="switchPage('emotion-page')">😊 Emotion</button>
         <button class="nav-btn" onclick="switchPage('dua-page')">🌼 Dua of the Day</button>
         <button class="nav-btn" onclick="switchPage('history-page')">📝 History</button>
+        <button class="nav-btn" onclick="switchPage('analytics-page')">📊 Analytics</button>
         <button class="nav-btn" onclick="switchPage('profile-page')">👤 Profile</button>
     </nav>
 
@@ -146,6 +147,20 @@
 
 </div>
 
+    <div id="analytics-page" class="page">
+
+    <div class="card">
+
+        <h2>📊 Emotion Analytics</h2>
+
+        <canvas id="emotionChart"></canvas>
+
+        <p id="mostEmotion" style="margin-top:20px;"></p>
+
+    </div>
+
+</div>
+
     <footer>
         Made with ❤️ by DuaMate
     </footer>
@@ -154,6 +169,8 @@
 <!-- Menyambungkan fail index.html dengan script.js di bahagian paling bawah -->
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script src="firebase.js"></script>
 <script src="script.js"></script>
