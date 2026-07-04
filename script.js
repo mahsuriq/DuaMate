@@ -85,6 +85,8 @@ function showDua() {
     
     // Paparkan doa yang sepadan dengan emosi
     document.getElementById("doa").innerText = duas[emotion];
+   document.getElementById("reflection").innerText =
+   reflections[emotion];
     
     // Ambil masa & tarikh semasa butang ditekan
     const now = new Date();
