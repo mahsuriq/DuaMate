@@ -33,6 +33,37 @@ const reflections = {
 "Confused 😕":"When you don't know which path to take, ask Allah for guidance. He always leads sincere hearts."
 };
 
+const motivation = {
+
+"Happy 😊":"🤍 Keep smiling. Your happiness is a blessing from Allah.",
+
+"Sad 😢":"🌸 Allah is with those who are patient.",
+
+"Anxious 😟":"🤲 Trust Allah's plan. Everything happens at the perfect time.",
+
+"Angry 😠":"🍃 Patience is one of the strongest forms of worship.",
+
+"Grateful 🤍":"✨ Gratitude opens the door to more blessings.",
+
+"Stressed 😫":"🌿 Take a breath. Allah is always by your side.",
+
+"Lonely 🥺":"🤍 Allah is the Best Companion.",
+
+"Confused 😕":"🕊 Ask Allah for guidance and He will show you the way."
+
+};
+
+const popup = document.getElementById("popup");
+
+document.getElementById("popupText").innerText =
+motivation[emotion];
+
+popup.style.display="block";
+
+setTimeout(()=>{
+popup.style.display="none";
+},3000);
+
 // Database untuk Dua of the Day (Rawak)
 const dailyDuas = [
     "Rabbi yassir wa la tu'assir wa tammim bil khair.\n\nMeaning: My Lord, make things easy for me and do not make them difficult, and complete them with goodness.",
