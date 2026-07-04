@@ -130,10 +130,6 @@ function setupDailyDua() {
     document.getElementById("dailyDua").innerText = dailyDuas[index];
 }
 
-// Fungsi yang berjalan secara automatik apabila kod JS dimuatkan
-displayHistory();
-setupDailyDua();
-updateChart();
 let emotionChart;
 
 function updateChart() {
@@ -208,3 +204,8 @@ function updateChart() {
     }
 
 }
+// Fungsi yang berjalan secara automatik apabila kod JS dimuatkan
+displayHistory();
+setupDailyDua();
+updateChart();
+
