@@ -132,3 +132,77 @@ function setupDailyDua() {
 // Fungsi yang berjalan secara automatik apabila kod JS dimuatkan
 displayHistory();
 setupDailyDua();
+let emotionChart;
+
+function updateChart() {
+
+    let history = JSON.parse(localStorage.getItem("duamate_history")) || [];
+
+    let counts = {
+        "Happy 😊":0,
+        "Sad 😢":0,
+        "Anxious 😟":0,
+        "Angry 😠":0,
+        "Grateful 🤍":0,
+        "Stressed 😫":0,
+        "Lonely 🥺":0,
+        "Confused 😕":0
+    };
+
+    history.forEach(item=>{
+        counts[item.emotion]++;
+    });
+
+    const labels = Object.keys(counts);
+    const values = Object.values(counts);
+
+    if(emotionChart){
+        emotionChart.destroy();
+    }
+
+    emotionChart = new Chart(document.getElementById("emotionChart"),{
+
+        type:"bar",
+
+        data:{
+
+            labels:labels,
+
+            datasets:[{
+
+                label:"Number of Times Selected",
+
+                data:values,
+
+                borderWidth:1
+
+            }]
+
+        },
+
+        options:{
+            responsive:true,
+            scales:{
+                y:{
+                    beginAtZero:true
+                }
+            }
+        }
+
+    });
+
+    let max = Math.max(...values);
+
+    if(max>0){
+
+        document.getElementById("mostEmotion").innerHTML =
+        "🌟 Most Selected Emotion: <b>"+labels[values.indexOf(max)]+"</b>";
+
+    }else{
+
+        document.getElementById("mostEmotion").innerHTML =
+        "No emotion history yet.";
+
+    }
+
+}
