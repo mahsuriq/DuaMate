@@ -28,6 +28,9 @@ function showApp() {
         document.getElementById("welcomeUser").innerText =
             "Welcome, " + name + " 🤍";
 
+        document.getElementById("profileName").innerText = name;
+        document.getElementById("profileEmail").innerText = user.email;
+
     });
 }
 
