@@ -14,6 +14,25 @@ const duas = {
     "Confused 😕": "Rabbi zidni ilma.\n\nMeaning: My Lord, increase me in knowledge."
 };
 
+const reflections = {
+
+"Happy 😊":"Alhamdulillah. Happiness is one of Allah's greatest blessings. Remember to thank Him and spread your joy to those around you. 🤍",
+
+"Sad 😢":"Every hardship carries hidden wisdom. Allah knows your pain, and every tear you shed is known to Him. Keep making dua and trust His plan. 🌸",
+
+"Anxious 😟":"Your future is already written by Allah. Focus on what you can do today and leave the rest to Him. 🤲",
+
+"Angry 😠":"Take a deep breath. Strength is shown by controlling anger. Seek refuge in Allah and choose patience. 🍃",
+
+"Grateful 🤍":"Gratitude increases blessings. Continue appreciating every small gift Allah has given you. ✨",
+
+"Stressed 😫":"Allah never burdens a soul beyond what it can bear. You are stronger than you think. 🌿",
+
+"Lonely 🥺":"You are never truly alone. Allah is always closer to you than anyone else. 🤍",
+
+"Confused 😕":"When you don't know which path to take, ask Allah for guidance. He always leads sincere hearts."
+};
+
 // Database untuk Dua of the Day (Rawak)
 const dailyDuas = [
     "Rabbi yassir wa la tu'assir wa tammim bil khair.\n\nMeaning: My Lord, make things easy for me and do not make them difficult, and complete them with goodness.",
