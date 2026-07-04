@@ -87,6 +87,7 @@ function saveHistory(emotion, timestamp) {
     // Simpan semula ke storan pelayar web
     localStorage.setItem("duamate_history", JSON.stringify(history));
     displayHistory();
+    updateChart();
 }
 
 // Paparkan senarai sejarah dalam bentuk senarai (List)
@@ -132,6 +133,7 @@ function setupDailyDua() {
 // Fungsi yang berjalan secara automatik apabila kod JS dimuatkan
 displayHistory();
 setupDailyDua();
+updateChart();
 let emotionChart;
 
 function updateChart() {
