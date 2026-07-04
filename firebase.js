@@ -73,3 +73,21 @@ auth.onAuthStateChanged((user) => {
         showApp();
     }
 });
+function logout() {
+    auth.signOut()
+        .then(() => {
+            // Hide the app
+            document.querySelector(".container").style.display = "none";
+
+            // Show the login page
+            document.getElementById("loginBox").style.display = "block";
+
+            // Clear the input fields
+            document.getElementById("email").value = "";
+            document.getElementById("password").value = "";
+            document.getElementById("msg").innerText = "";
+        })
+        .catch((error) => {
+            alert(error.message);
+        });
+}
