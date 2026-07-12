@@ -327,3 +327,15 @@ transform:translateY(0);
 }
 
 }
+
+.login-logo{
+    width:230px;
+    display:block;
+    margin:0 auto 20px;
+}
+
+.header-logo{
+    width:220px;
+    display:block;
+    margin:0 auto 15px;
+}
